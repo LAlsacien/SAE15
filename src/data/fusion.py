@@ -2,24 +2,28 @@ import pandas as pd
 import glob
 import os
 
-## Récupération de toutes les données des fichiers .csv :
+def pandas():
 
-fichiers_csv = glob.glob('..\..\data\\raw\sending*.csv')
+    ## Récupération de toutes les données des fichiers .csv :
 
-## Les données sont regroupés dans une liste (ici "raw_liste") :
+    fichiers_csv = glob.glob('..\..\data\\raw\sending*.csv')
 
-raw_liste = []
-for file in fichiers_csv:
-    raw_liste.append(pd.read_csv(file))
+    ## Les données sont regroupés dans une liste (ici "raw_liste") :
 
-## Mise en forme des données dans la liste raw dans un fichier .csv :
+    raw_liste = []
+    for file in fichiers_csv:
+        raw_liste.append(pd.read_csv(file,sep=";"))
 
-df = pd.concat(raw_liste, axis=0, sort=True)
-df.to_csv('..\..\data\processed\\resultat.csv',index=False)
+    ## Mise en forme des données dans la liste raw dans un fichier .csv :
 
-## Vérification du succès de l'opération (Il affichera true si le fichier existe déjà) :
+    df = pd.concat(raw_liste, axis=0, sort=False)
+    df.to_csv('..\..\data\processed\\resultat.csv',index=False)
 
-if os.path.isfile('..\..\data\processed\\resultat.csv') is True:
-    print("Opération effectuée avec succès.")
-else:
-    print("Erreur !")
+    ## Vérification du succès de l'opération (Il affichera true si le fichier existe déjà) :
+
+    if os.path.isfile('..\..\data\processed\\resultat.csv') is True:
+        print("Opération effectuée avec succès.")
+    else:
+        print("Erreur !")
+
+pandas()
