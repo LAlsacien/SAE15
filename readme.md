@@ -11,11 +11,11 @@ les différents paramètres possible. Afin de mieux comprendre les données gén
 ## Tâches
 Les tâches demandées dans ce projet sont les suivantes.
 
-1. Écrire un programme qui fusionne les fichiers csv (*dossier src/data*).
+OK 1. Écrire un programme qui fusionne les fichiers csv (*dossier src/data*).
 2. Établir pour chaque variable le nombre de valeurs manquantes et aberrante ainsi que le pourcentage que cela représente.
 3. Établir le nombre et le pourcentage d'observations qui ont des valeurs aberrantes et/ou manquantes.
 4. Calculer le temps d'envoi des données.
-5. Définir les fonctions ComputeMean et ComputeMedian et calculer (*src/model/model.py*) le temps médian de transmission pour chaque facteur d'étalement (spreading factor).
+OK 5. Définir les fonctions ComputeMean (moyenne) et ComputeMedian et calculer (*src/model/model.py*) le temps médian de transmission pour chaque facteur d'étalement (spreading factor).
 6. Afficher la courbe qui montre la relation entre la taille des données et le temps d'envoi associée en fonction du facteur d'étalement (spreading factor),
 la bande passante et la taux de redondance (coding rate).
 
